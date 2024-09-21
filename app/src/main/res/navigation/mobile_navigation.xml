@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/id_fish">
+
+    <fragment
+        android:id="@+id/id_fish"
+        android:name="com.vokrob.fishermans_handbook.ui.home.HomeFragment"
+        android:label="@string/fish"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/id_bait"
+        android:name="com.vokrob.fishermans_handbook.ui.gallery.GalleryFragment"
+        android:label="@string/bait"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/id_tackle"
+        android:name="com.vokrob.fishermans_handbook.ui.slideshow.SlideshowFragment"
+        android:label="@string/tackle"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/id_lure"
+        android:name="com.vokrob.fishermans_handbook.ui.slideshow.SlideshowFragment"
+        android:label="@string/lure"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/id_stories"
+        android:name="com.vokrob.fishermans_handbook.ui.slideshow.SlideshowFragment"
+        android:label="@string/stories"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/id_advice"
+        android:name="com.vokrob.fishermans_handbook.ui.slideshow.SlideshowFragment"
+        android:label="@string/advice"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
