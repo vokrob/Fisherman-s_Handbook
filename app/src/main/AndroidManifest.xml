@@ -25,6 +25,7 @@
         </activity>
         <activity android:name="com.vokrob.fishermans_handbook.Text_Content_Activity" />
         <activity android:name="com.vokrob.fishermans_handbook.MainActivity" android:theme="@style/Theme.Fishermans_Handbook.NoActionBar" />
+        <activity android:name="com.vokrob.fishermans_handbook.settings.SettingsActivity" />
     </application>
 
 </manifest>

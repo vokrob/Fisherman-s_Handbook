@@ -6,13 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class Logo_Activity extends Activity {
     private Animation logoAnim, buttonLogoAnim;
-    private Button bAnim;
-
     private ImageView logoImage;
 
     @Override
@@ -20,7 +17,7 @@ public class Logo_Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logo_activity);
         init();
-
+        startMainActivity();
     }
 
     private void init() {
@@ -28,10 +25,7 @@ public class Logo_Activity extends Activity {
         buttonLogoAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.button_anim);
 
         logoImage = findViewById(R.id.logoView);
-        bAnim = findViewById(R.id.buttonAnim);
         logoImage.startAnimation(logoAnim);
-        bAnim.startAnimation(buttonLogoAnim);
-
     }
 
     public void onClickStart(View view) {
@@ -44,6 +38,21 @@ public class Logo_Activity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         finish();
+    }
+
+    private void startMainActivity() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                Intent i = new Intent(Logo_Activity.this, MainActivity.class);
+                startActivity(i);
+            }
+        }).start();
     }
 }
 
