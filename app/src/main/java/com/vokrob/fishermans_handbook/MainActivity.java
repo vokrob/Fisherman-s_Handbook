@@ -20,6 +20,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.vokrob.fishermans_handbook.databinding.ActivityMainBinding;
+import com.vokrob.fishermans_handbook.settings.SettingsActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -78,6 +79,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getMenuInflater().inflate(R.menu.main, menu);
         toolbar.setTitle(R.string.fish);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            openSettingsActivity();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void openSettingsActivity() {
+        Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(i);
     }
 
     @Override

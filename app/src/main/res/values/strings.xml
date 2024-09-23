@@ -6,6 +6,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Настройки</string>
+    <string name="main_text_size">Размер главного текста</string>
+    <string name="text_settings">Настройки текста</string>
 
     <string name="fish">Рыба</string>
     <string name="bait">Наживка</string>
